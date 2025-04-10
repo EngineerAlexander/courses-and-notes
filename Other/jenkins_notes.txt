@@ -1,0 +1,73 @@
+Beginers interview questions:
+https://www.youtube.com/watch?v=2AVp9kie6s8
+
+What is Jenkins?
+-fragmented workfolow is a common problem for devops as individuals work independently
+-jenkins is an open-source automation tool written in Java with plugins built for a continous integration process
+Jenkins vs Bamboo?
+-jenkins is an open source tool
+-jenkins is completely free
+-jenkins supports a lot of plugins
+-jenkins has a lot of support being open source
+
+Define the process of Jenkins?
+-individual developers commit changes to a git repository
+-jenkins server detect source code changes
+-jenkins deploys the build application on the test server and the build either passes or fails
+-jenkins generates feedback
+
+Benifits of Jenkins?
+-Cache build failures
+-automatic build report notification
+-achieves continous integration
+-automation of maven project
+-easy tracking of bugs
+
+Pre-requisits of using Jenkins?
+-a source code repository which is accessible like a Git repository
+-a working build script, ex: Maven script, checked into the repository
+
+What is the relationship between Jenkins and Hundson?
+-Hudson was the earlier version and name of Jenkins
+
+Mention some of the useful plugins in Jenkins?
+-Maven 2 project
+-Git
+-Amazon EC2
+-HTML publisher
+-copy artifact
+-join
+-Green Balls
+
+How do you install Jenkins?
+1. install Java version 8
+2. install apache tomcat verion 9
+3. download jenkins war file
+4. deploy jenkins war file
+5. install suggested plugins
+
+What are the two components Jenkins is mainly integrated with:
+-git
+-Maven
+
+What is maven? What is the benefit of integrating Maven with Jenkins?
+-Maven is a build management tool. it uses a simple pom.xml file to configure all the dependencies needed to build, test, and run the code
+
+Mention the commands to start jenkins manually.
+Command line from install location
+-Start: jenkins.exe start
+-Stop: jenkins.exe stop
+-restart: jenkins.exe restart
+
+How will you define Post in jenkins?
+-section that contains several steps that might execute after the completion of the pipeline
+-parameters are supported by Agent section and a
+-ex. sucess, failure, aborted
+
+What are parameters in jenkins?
+-parameters supported in Agent section and they are used to support various user-cases of pipleline
+
+What is Groovy?
+-Groovy from apache is a language designed for the Jave platform
+-Native scripting language for jenkins
+-built reports with dynamic and comprehensive nature

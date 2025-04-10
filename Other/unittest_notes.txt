@@ -1,0 +1,67 @@
+# TestCase class provided assert methods---------------------------------------------
+# "ETIN IN INSTANCE" to remember all of them!!!!!
+# or "ENIT IN INSTANCE"
+#
+# Docs: https://docs.python.org/3/library/unittest.html#unittest.TestCase.debug
+assertEqual(a, b); acts like a==b
+asertNotEqual(a, b); acts like a!=b
+assertTrue(x); bool(x) is True;
+assertFalse(x); bool(x) is False;
+assertIs(a, b); a is b; this is an identity comparison. is true if they're the same object
+assertIsNot(a, b); a is not b;
+assertIsNone(x); x is None; 
+assertIsNotNone(x); x is not None;
+assertIn(a, b); a in b;
+assertNotIn(a, b); a not in b;
+assertIsInstance(a, b); isinstance(a, b);
+assertIsNotInstance(a, b); not isinstance(a, b);
+#------------------------------------------------------------------------------------
+NOTE these can all pass an argument for a message: msg = ""; default is msg = None 
+
+#IMPORTANT TO TEST EDGE CASES!
+ex 2 integers:
+-, +
+-, -
++, -
++, +
+be sure to also test fractions or even stuff like .333 repeating if applicable
+
+TESTING EXCEPTIONS USING A CONTEXT MANAGER:
+-allows you to call function normally and handle exceptions properly
+ex:
+with self.assertRaises(TypeOfError):
+    calc.divide(10, 0)
+-without context manager:
+self.assertRaises(ValueError, calc.divide, param1, param2)
+
+Tests should be isolated!
+You should be able to run any test independent of any other test.
+Tests should not depend on eachother or order.
+
+Test driven development = you write the test before you write the code
+- should think about what you want your code to do
+- write a test testing that behavior
+- watch initial code fail and then write code that works with the test
+
+Types of exceptions:
+List: https://docs.python.org/3/library/exceptions.html
+-AssertionError; raised when assert statement fails
+-AttributeError; raised when attribute reference or assignment fails
+-ImportError; raised when import statement has troubles trying to load a module
+-IndexError; raised when sequence subscript is out of range
+-KeyError; raised when mapping key of dictionary is not found in the set of existing keys
+-MemoryError; raised when the user hits the interrupt key
+-NameError; raised when you try to use a variable or function name that isn't valid
+-RuntimeError; raised when error is detected that doesn't fall into any other categories
+-TabError; raised when indentation contains inconsistent use of tabs or spaces
+-TypeError; raised when an operation or function is applied to an object of innapropriate type.
+-ValueError; raised when an operation or function recieves an argument that has the right type but inappropriate value
+-ZeroDivisionError; raised when the second argument of a division or modulo operator is zero
+
+NOTE THAT WARNINGS ALSO EXIST WITH BASE CLASS: Exception Warning
+
+Possible outputs from unittest run:
+OK: displays when all tests pass
+FAILED: displays when any test fails or raises an AssertionError
+ERROR: displays when any test fails and raises an error other than an AssertionError
+
